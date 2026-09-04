@@ -1,0 +1,833 @@
+/* =====================================================
+   RESET
+   ===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: white;
+    overflow-x: hidden;
+}
+/* =====================================================
+   HERO
+   ===================================================== */
+.hero {
+    min-height: 100vh;
+    min-height: 100svh;
+    background:
+        linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.85)),
+        url("imagenes/f8ea04c5.jpg") center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+.navbar {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+.logo {
+    color: #ff6a00;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+.nav-links a:hover {
+    color: #ff6a00;
+}
+/* =====================================================
+   HERO CONTENT
+   ===================================================== */
+.hero-contenido {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+.bienvenida {
+    color: #ff6a00;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+    animation: aparecer 1s ease;
+}
+.hero h1 {
+    font-size: clamp(45px, 9vw, 100px);
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-shadow: 0 0 30px rgba(255,106,0,.4);
+    animation: subir 1s ease;
+}
+.descripcion {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ddd;
+    animation: aparecer 1.5s ease;
+}
+/* =====================================================
+   BOTONES
+   ===================================================== */
+.boton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #ff6a00;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: .3s;
+    box-shadow: 0 0 20px rgba(255,106,0,.25);
+}
+.boton:hover {
+    background: #ff8533;
+    transform: translateY(-4px);
+    box-shadow:
+        0 8px 30px rgba(255,106,0,.4);
+}
+/* =====================================================
+   MENU
+   ===================================================== */
+.menu {
+    padding: 80px 7%;
+    max-width: 1200px;
+    margin: auto;
+}
+/* =====================================================
+   IDIOMAS
+   ===================================================== */
+.idiomas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.idiomas button {
+    background: #151515;
+    color: white;
+    border: 1px solid #ff6a00;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .3s;
+}
+.idiomas button:hover {
+    background: #ff6a00;
+}
+/* =====================================================
+   MENU IMAGE
+   ===================================================== */
+.imagen-menu {
+    display: block;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    border-radius: 15px;
+    box-shadow:
+        0 0 40px rgba(255,106,0,.15);
+    transition: .4s;
+}
+.imagen-menu:hover {
+    transform: scale(1.01);
+}
+/* =====================================================
+   MENU INTRO
+   ===================================================== */
+.menu-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-intro h2 {
+    color: #ff6a00;
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+.menu-intro p {
+    color: #aaa;
+}
+/* =====================================================
+   CATEGORIAS
+   ===================================================== */
+.menu-categoria {
+    margin-bottom: 55px;
+}
+.menu-categoria h3 {
+    color: #ff6a00;
+    font-size: 25px;
+    border-bottom: 2px solid #ff6a00;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+/* =====================================================
+   PLATOS
+   ===================================================== */
+.plato {
+    background: #111;
+    border: 1px solid #222;
+    padding: 18px 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    transition: .3s;
+}
+.plato:hover {
+    border-color: #ff6a00;
+    transform: translateX(5px);
+    background: #151515;
+}
+.plato h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.plato p {
+    color: #888;
+    font-size: 14px;
+}
+.plato-derecha {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.plato-derecha span {
+    color: #ff6a00;
+    font-weight: bold;
+    font-size: 18px;
+    white-space: nowrap;
+}
+/* =====================================================
+   ➕ BOTON AGREGAR
+   ===================================================== */
+.agregar-btn {
+    width: 34px;
+    height: 34px;
+    margin: 0 0 0 10px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #ff6a00;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: all .2s ease;
+}
+.agregar-btn:hover {
+    background: #ff7b1a;
+    transform: scale(1.12);
+    box-shadow:
+        0 4px 12px rgba(255,106,0,.35);
+}
+.agregar-btn:active {
+    transform: scale(.9);
+}
+/* =====================================================
+   CONTACTO
+   ===================================================== */
+.contacto {
+    text-align: center;
+    padding: 90px 20px;
+    background: #0e0e0e;
+    border-top: 1px solid #222;
+}
+.contacto h2 {
+    color: #ff6a00;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.contacto p {
+    color: #aaa;
+    font-size: 18px;
+}
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #050505;
+    color: #666;
+    font-size: 14px;
+}
+/* =====================================================
+   ANIMACIONES
+   ===================================================== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes subir {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =====================================================
+   🛒 CARRITO FLOTANTE
+   ===================================================== */
+#carrito-flotante {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background: #ff6a00;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.45);
+    z-index: 9999;
+    transition: all .3s ease;
+    animation: carritoFlotante 2.5s ease-in-out infinite;
+}
+#carrito-flotante:hover {
+    transform: scale(1.1);
+    background: #ff7b1a;
+    box-shadow:
+        0 10px 30px rgba(255,106,0,.5);
+    animation: none;
+}
+@keyframes carritoFlotante {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+/* =====================================================
+   CONTADOR DEL CARRITO
+   ===================================================== */
+#contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    min-width: 24px;
+    height: 24px;
+    padding: 0 5px;
+    background: white;
+    color: #ff6a00;
+    border: 2px solid #ff6a00;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.3);
+}
+/* =====================================================
+   FONDO DEL CARRITO
+   ===================================================== */
+#carrito-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    z-index: 9997;
+}
+#carrito-overlay.activo {
+    opacity: 1;
+    visibility: visible;
+}
+/* =====================================================
+   PANEL DEL CARRITO
+   ===================================================== */
+#carrito {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 390px;
+    max-width: 92vw;
+    height: 100vh;
+    background: #111;
+    color: white;
+    box-shadow:
+        -10px 0 35px rgba(0,0,0,.5);
+    transform: translateX(100%);
+    transition: transform .35s ease;
+    z-index: 9998;
+    display: flex;
+    flex-direction: column;
+}
+#carrito.activo {
+    transform: translateX(0);
+}
+/* =====================================================
+   CABECERA DEL CARRITO
+   ===================================================== */
+.carrito-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px;
+    background: #181818;
+    border-bottom:
+        1px solid rgba(255,106,0,.3);
+}
+.carrito-header h2 {
+    color: #ff6a00;
+    font-size: 22px;
+}
+.cerrar-carrito {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: #252525;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .25s ease;
+}
+.cerrar-carrito:hover {
+    background: #ff6a00;
+    transform: rotate(90deg);
+}
+/* =====================================================
+   PRODUCTOS DEL CARRITO
+   ===================================================== */
+#carrito-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 18px;
+}
+#carrito-items::-webkit-scrollbar {
+    width: 6px;
+}
+#carrito-items::-webkit-scrollbar-track {
+    background: #111;
+}
+#carrito-items::-webkit-scrollbar-thumb {
+    background: #ff6a00;
+    border-radius: 10px;
+}
+/* =====================================================
+   PRODUCTO DEL CARRITO
+   ===================================================== */
+.carrito-item {
+    background: #1c1c1c;
+    border: 1px solid #292929;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 12px;
+    transition: all .25s ease;
+}
+.carrito-item:hover {
+    border-color: #ff6a00;
+    transform: translateX(-3px);
+}
+.carrito-item h4 {
+    margin: 0 0 6px;
+    color: white;
+    font-size: 16px;
+}
+.carrito-item .precio {
+    color: #ff6a00;
+    font-weight: bold;
+}
+/* =====================================================
+   CONTROLES DEL CARRITO
+   ===================================================== */
+.carrito-controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+.carrito-controles button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+    background: #292929;
+    color: white;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+.carrito-controles button:hover {
+    background: #ff6a00;
+}
+.carrito-controles span {
+    min-width: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+/* =====================================================
+   ELIMINAR ITEM
+   ===================================================== */
+.eliminar-item {
+    margin-left: auto;
+    background: transparent !important;
+    color: #ff4d4d !important;
+    font-size: 16px !important;
+}
+.eliminar-item:hover {
+    background: #ff4d4d !important;
+    color: white !important;
+}
+/* =====================================================
+   CARRITO VACÍO
+   ===================================================== */
+.carrito-vacio {
+    text-align: center;
+    color: #888;
+    padding: 60px 20px;
+    font-size: 16px;
+}
+/* =====================================================
+   FOOTER DEL CARRITO
+   ===================================================== */
+.carrito-footer {
+    padding: 20px;
+    background: #181818;
+    border-top:
+        1px solid rgba(255,106,0,.3);
+}
+/* =====================================================
+   TOTAL
+   ===================================================== */
+.total-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.total-carrito strong {
+    color: #ff6a00;
+    font-size: 24px;
+}
+/* =====================================================
+   BOTONES DEL CARRITO
+   ===================================================== */
+.vaciar-btn,
+.pedido-btn {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all .25s ease;
+}
+.vaciar-btn {
+    background: #292929;
+    color: #ddd;
+}
+.vaciar-btn:hover {
+    background: #3a3a3a;
+}
+.pedido-btn {
+    background: #ff6a00;
+    color: white;
+    box-shadow:
+        0 5px 15px rgba(255,106,0,.25);
+}
+.pedido-btn:hover {
+    background: #ff7b1a;
+    transform: translateY(-2px);
+    box-shadow:
+        0 8px 20px rgba(255,106,0,.4);
+}
+/* =====================================================
+   📱 DISEÑO PARA CELULAR
+   ===================================================== */
+@media (max-width: 700px) {
+    /* GENERAL */
+    body {
+        overflow-x: hidden;
+    }
+    /* HERO */
+    .hero {
+        min-height: 100svh;
+    }
+    .navbar {
+        padding: 18px 20px;
+        flex-direction: column;
+        gap: 18px;
+    }
+    .logo {
+        font-size: 21px;
+    }
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 22px;
+    }
+    .nav-links a {
+        font-size: 14px;
+    }
+    .hero-contenido {
+        padding: 30px 20px 60px;
+    }
+    .bienvenida {
+        font-size: 13px;
+        letter-spacing: 3px;
+        margin-bottom: 12px;
+    }
+    .hero h1 {
+        font-size: clamp(42px, 13vw, 62px);
+        line-height: 1;
+        letter-spacing: 2px;
+    }
+    .descripcion {
+        max-width: 330px;
+        margin-top: 18px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    .boton {
+        margin-top: 25px;
+        padding: 14px 25px;
+        border-radius: 10px;
+        font-size: 15px;
+    }
+    /* MENU */
+    .menu {
+        width: 100%;
+        padding: 50px 16px 80px;
+    }
+    /* IDIOMAS */
+    .idiomas {
+        gap: 8px;
+        margin-bottom: 25px;
+    }
+    .idiomas button {
+        padding: 9px 16px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+    /* IMAGEN */
+    .imagen-menu {
+        width: 100%;
+        margin-bottom: 45px;
+        border-radius: 12px;
+    }
+    /* INTRO */
+    .menu-intro {
+        margin-bottom: 35px;
+    }
+    .menu-intro h2 {
+        font-size: 30px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+    .menu-intro p {
+        font-size: 14px;
+        line-height: 1.5;
+        padding: 0 10px;
+    }
+    /* CATEGORIAS */
+    .menu-categoria {
+        margin-bottom: 40px;
+    }
+    .menu-categoria h3 {
+        font-size: 21px;
+        padding-bottom: 10px;
+        margin-bottom: 12px;
+    }
+    /* PLATOS */
+    .plato {
+        width: 100%;
+        min-height: 72px;
+        padding: 14px 12px 14px 15px;
+        margin-bottom: 9px;
+        border-radius: 12px;
+        gap: 10px;
+    }
+    .plato:hover {
+        transform: none;
+    }
+    .plato h4 {
+        font-size: 15px;
+        line-height: 1.25;
+        margin-bottom: 4px;
+    }
+    .plato p {
+        font-size: 12px;
+        line-height: 1.35;
+    }
+    .plato-derecha {
+        gap: 7px;
+        flex-shrink: 0;
+    }
+    .plato-derecha span {
+        font-size: 15px;
+    }
+    /* BOTON + */
+    .agregar-btn {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        margin-left: 4px;
+        font-size: 21px;
+        line-height: 32px;
+    }
+    .agregar-btn:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    .agregar-btn:active {
+        transform: scale(.88);
+    }
+    /* CONTACTO */
+    .contacto {
+        padding: 65px 20px;
+    }
+    .contacto h2 {
+        font-size: 29px;
+    }
+    .contacto p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    /* FOOTER */
+    footer {
+        padding: 22px 15px;
+        font-size: 12px;
+    }
+    /* CARRITO FLOTANTE */
+    #carrito-flotante {
+        width: 58px;
+        height: 58px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 24px;
+    }
+    #contador-carrito {
+        min-width: 22px;
+        height: 22px;
+        font-size: 12px;
+        top: -4px;
+        right: -4px;
+    }
+    /* PANEL DEL CARRITO */
+    #carrito {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 18px 0 0 18px;
+    }
+    .carrito-header {
+        padding: 18px;
+    }
+    .carrito-header h2 {
+        font-size: 20px;
+    }
+    #carrito-items {
+        padding: 14px;
+    }
+    .carrito-item {
+        padding: 13px;
+        border-radius: 12px;
+    }
+    .carrito-item h4 {
+        font-size: 15px;
+    }
+    .carrito-footer {
+        padding: 16px;
+    }
+    .total-carrito {
+        font-size: 17px;
+    }
+    .total-carrito strong {
+        font-size: 22px;
+    }
+    .vaciar-btn,
+    .pedido-btn {
+        padding: 14px;
+        border-radius: 10px;
+    }
+}
+/* =====================================================
+   📱 CELULARES MUY PEQUEÑOS
+   ===================================================== */
+@media (max-width: 380px) {
+    .navbar {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 13px;
+    }
+    .menu {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .plato {
+        padding-left: 12px;
+        padding-right: 10px;
+    }
+    .plato h4 {
+        font-size: 14px;
+    }
+    .plato p {
+        font-size: 11px;
+    }
+    .plato-derecha span {
+        font-size: 14px;
+    }
+    .agregar-btn {
+        width: 30px;
+        height: 30px;
+        min-width: 30px;
+        font-size: 19px;
+    }
+}

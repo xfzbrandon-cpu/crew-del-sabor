@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crew del Sabor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- =========================
+     HERO
+========================= -->
+<header class="hero" id="inicio">
+    <nav class="navbar">
+        <div class="logo">
+            CREW DEL SABOR
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#inicio">Inicio</a>
+            </li>
+            <li>
+                <a href="#menu">Menú</a>
+            </li>
+            <li>
+                <a href="#contacto">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="hero-contenido">
+        <p
+            class="bienvenida"
+            data-es="BIENVENIDO A"
+            data-en="WELCOME TO"
+        >
+            BIENVENIDO A
+        </p>
+        <h1>
+            CREW DEL SABOR
+        </h1>
+        <p
+            class="descripcion"
+            data-es="El sabor que une al Crew"
+            data-en="The flavor that brings the Crew together"
+        >
+            El sabor que une al Crew
+        </p>
+        <a
+            href="#menu"
+            class="boton"
+            data-es="VER MENÚ"
+            data-en="VIEW MENU"
+        >
+            VER MENÚ
+        </a>
+    </div>
+</header>
+<!-- =========================
+     MENÚ
+========================= -->
+<section id="menu" class="menu">
+    <!-- IDIOMAS -->
+    <div class="idiomas">
+        <button onclick="cambiarIdioma('es')">
+            🇪🇸 Español
+        </button>
+        <button onclick="cambiarIdioma('en')">
+            🇺🇸 English
+        </button>
+    </div>
+    <!-- IMAGEN DEL MENÚ -->
+    <img
+        src="imagenes/48c94527.jpg"
+        alt="Menú de Crew del Sabor"
+        class="imagen-menu"
+    >
+    <!-- INTRO -->
+    <div class="menu-intro">
+        <h2
+            data-es="NUESTRO MENÚ"
+            data-en="OUR MENU"
+        >
+            NUESTRO MENÚ
+        </h2>
+        <p
+            data-es="Hecho para el Crew. Hecho para disfrutar."
+            data-en="Made for the Crew. Made to enjoy."
+        >
+            Hecho para el Crew. Hecho para disfrutar.
+        </p>
+    </div>
+    <!-- =========================
+         HAMBURGUESAS
+    ========================= -->
+    <div class="menu-categoria">
+        <h3
+            data-es="🍔 HAMBURGUESAS"
+            data-en="🍔 BURGERS"
+        >
+            🍔 HAMBURGUESAS
+        </h3>
+        <div class="plato">
+            <div>
+                <h4>Classic Crew</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$10.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Classic Crew', 10.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Hot Crew</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$11.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Hot Crew', 11.99)"
+                >
+                   +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>BBQ Crew</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$11.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('BBQ Crew', 11.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Mushroom Swiss</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$13.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Mushroom Swiss', 13.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         HOT DOGS
+    ========================= -->
+    <div class="menu-categoria">
+        <h3
+            data-es="🌭 HOT DOGS"
+            data-en="🌭 HOT DOGS"
+        >
+            🌭 HOT DOGS
+        </h3>
+        <div class="plato">
+            <div>
+                <h4>Classic Dog</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$5.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Classic Dog', 5.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Chilli Cheese Dog</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$7.49</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Chilli Cheese Dog', 7.49)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Bacon Dog</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$8.49</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Bacon Dog', 8.49)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         PAPAS Y ACOMPAÑANTES
+    ========================= -->
+    <div class="menu-categoria">
+        <h3
+            data-es="🍟 PAPAS Y ACOMPAÑANTES"
+            data-en="🍟 FRIES & SIDES"
+        >
+            🍟 PAPAS Y ACOMPAÑANTES
+        </h3>
+        <div class="plato">
+            <div>
+                <h4>Loaded Fries</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$8.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Loaded Fries', 8.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Regular Fries</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$4.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Regular Fries', 4.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Onion Rings</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$5.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Onion Rings', 5.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Chicken Nuggets 6pc</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$5.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Chicken Nuggets 6pc', 5.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         WRAPS
+    ========================= -->
+    <div class="menu-categoria">
+        <h3
+            data-es="🌯 WRAPS"
+            data-en="🌯 WRAPS"
+        >
+            🌯 WRAPS
+        </h3>
+        <div class="plato">
+            <div>
+                <h4>Chicken Wrap</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$10.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Chicken Wrap', 10.99)"
+                >
+                   +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Steak Wrap</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$11.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Steak Wrap', 11.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Buffalo Wrap</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$11.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Buffalo Wrap', 11.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         BEBIDAS
+    ========================= -->
+    <div class="menu-categoria">
+        <h3
+            data-es="🥤 BEBIDAS"
+            data-en="🥤 DRINKS"
+        >
+            🥤 BEBIDAS
+        </h3>
+        <div class="plato">
+            <div>
+                <h4>Soda</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$2.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Soda', 2.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Refresco</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$1.49</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Refresco', 1.49)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Lemonade</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$2.99</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Lemonade', 2.99)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Iced Tea</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$2.49</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Iced Tea', 2.49)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Red Bull</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$3.49</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Red Bull', 3.49)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- =========================
+         EXTRAS
+    ========================= -->
+    <div class="menu-categoria">
+        <h3
+            data-es="➕ EXTRAS"
+            data-en="➕ EXTRAS"
+        >
+            ➕ EXTRAS
+        </h3>
+        <div class="plato">
+            <div>
+                <h4>Extra Patty</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$3.00</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Extra Patty', 3.00)"
+                >
+                    +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Extra Bacon</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$1.25</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Extra Bacon', 1.25)"
+                >
+                    +r
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Extra Cheese</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$1.00</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Extra Cheese', 1.00)"
+                >
+                  +
+                </button>
+            </div>
+        </div>
+        <div class="plato">
+            <div>
+                <h4>Extra Sauce</h4>
+                <p></p>
+            </div>
+            <div class="plato-derecha">
+                <span>$0.50</span>
+                <button
+                    type="button"
+                    class="agregar-btn"
+                    onclick="agregarAlCarrito('Extra Sauce', 0.50)"
+                >
+                   +
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- =========================
+     CONTACTO
+========================= -->
+<section id="contacto" class="contacto">
+    <h2
+        data-es="¿LISTO PARA COMER?"
+        data-en="READY TO EAT?"
+    >
+        ¿LISTO PARA COMER?
+    </h2>
+    <p
+        data-es="Llámanos y haz tu pedido."
+        data-en="Call us and place your order."
+    >
+        Llámanos y haz tu pedido.
+    </p>
+    <a
+        href="tel:+14453058465"
+        class="boton"
+        data-es="📞 LLAMAR AHORA"
+        data-en="📞 CALL NOW"
+    >
+        📞 LLAMAR AHORA
+    </a>
+</section>
+<!-- =========================
+     CARRITO FLOTANTE
+========================= -->
+<button
+    id="carrito-flotante"
+    type="button"
+    onclick="abrirCarrito()"
+    aria-label="Abrir carrito"
+>
+    🛒
+    <span id="contador-carrito">
+        0
+    </span>
+</button>
+<!-- FONDO OSCURO -->
+<div
+    id="carrito-overlay"
+    onclick="cerrarCarrito()"
+></div>
+<!-- =========================
+     CARRITO
+========================= -->
+<aside id="carrito">
+    <div class="carrito-header">
+        <h2>
+            🛒 Tu pedido
+        </h2>
+        <button
+            type="button"
+            class="cerrar-carrito"
+            onclick="cerrarCarrito()"
+        >
+            ✕
+        </button>
+    </div>
+    <div id="carrito-items">
+        <p class="carrito-vacio">
+            Tu carrito está vacío.
+        </p>
+    </div>
+    <div class="carrito-footer">
+        <div class="total-carrito">
+            <span>
+                Total
+            </span>
+            <strong id="total-carrito">
+                $0.00
+            </strong>
+        </div>
+        <button
+            type="button"
+            class="vaciar-btn"
+            onclick="vaciarCarrito()"
+        >
+            🗑️ Vaciar carrito
+        </button>
+        <button
+            type="button"
+            class="pedido-btn"
+            onclick="hacerPedidoWhatsApp()"
+        >
+            📲 Hacer pedido
+        </button>
+    </div>
+</aside>
+<!-- =========================
+     FOOTER
+========================= -->
+<footer>
+    <p>
+        ©️ 2026 Crew del Sabor
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
